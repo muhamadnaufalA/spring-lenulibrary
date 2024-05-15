@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/lenulibrary  # Ubah nama database menjadi lenulibrary
+      SPRING_DATASOURCE_USERNAME: postgres  # Sesuaikan dengan username PostgreSQL
+      SPRING_DATASOURCE_PASSWORD: 123  # Sesuaikan dengan password PostgreSQL
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: lenulibrary
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "54320:5432"  # Perbaiki port forwarding agar sesuai dengan port default PostgreSQL
