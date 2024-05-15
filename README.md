@@ -1,8 +1,8 @@
-# spring-lenulibrary
+# Spring-lenulibrary
 this is a Spring Boot project created for the internship selection process at PT LEN IOT. The project aims to demonstrate a simple application architecture using Spring Boot.
 
 
-## project-structure
+## Project-Structure
 The project follows a typical Spring Boot application structure with the following main components:
 
 - **Controller:** Contains classes annotated with @RestController that handle incoming HTTP requests, interact with the service layer, and return appropriate responses.
